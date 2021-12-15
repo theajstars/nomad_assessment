@@ -8,7 +8,6 @@ class Jungle {
     }
   }
   soundOff() {
-    console.log(TotalAnimals);
     TotalAnimals.map((thisAnimal) => {
       if (thisAnimal instanceof Monkey) {
         //Check if the monkey has enough energy to make a sound
@@ -119,8 +118,38 @@ class Snake extends Animal {
     return Snake.SnakeCount;
   }
 }
-const j = new Monkey("Monkey", 10);
-const s = new Snake("Tempter", 10);
-const t = new Tiger("Tigger", 10);
+
 const Amazon = new Jungle("Amazon Rainforest");
-console.log(Amazon.soundOff());
+const j = new Monkey("Apeman", 25);
+const j2 = new Monkey("Gideon", 10);
+const s = new Snake("Tempter", 10);
+const s2 = new Snake("Slither", 10);
+const t = new Tiger("Banshee", 10);
+const t2 = new Tiger("Tigger", 10);
+
+//Make sound
+Amazon.soundOff();
+
+//Get number of Monkey Species
+console.log(j.getCount());
+
+//Animals eating food
+console.log(t.eatFood());
+console.log(j.eatFood());
+console.log(s.eatFood());
+
+//Animals Sleeping
+console.log(t.sleep());
+console.log(j.sleep());
+console.log(s.sleep());
+
+//Animals Making Sound
+console.log(t.makeSound());
+console.log(j.makeSound());
+console.log(s.makeSound());
+
+//Monkey Playing until it gets tired
+console.log(j.play());
+console.log(j.play());
+console.log(j.play());
+console.log(j.play());
