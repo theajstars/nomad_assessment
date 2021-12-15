@@ -1,4 +1,3 @@
-console.clear();
 const TotalAnimals = [];
 class Jungle {
   constructor(name) {
